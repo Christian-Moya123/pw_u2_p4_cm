@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo Angular</title>
+    <script src="https://unpkg.com/angular/angular.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myController">
+        {{ mensaje }}
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('myController', function ($scope) {
+                $scope.mensaje = 'Hola Mundo por Angular';
+            });
+    </script>
+</body>
+
+</html>
