@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formularioD.css">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="formFormulario" id="myApp3">
+            <header>
+                <h1>Estudiante</h1>
+            </header>
+            <nav></nav>
+            <section>
+                <div class="form">
+
+                    <h2>Nueva Persona</h2>
+                    <label for="">Nombre</label>
+                    <p type="Nombre"><input placeholder="Ingrese su nombre" type="text" v-model="nombre"
+                            v-on:keypress.enter="agregarPersona"> </p>
+                    <label for="">Apellido</label>
+                    <p type="Apellido"><input placeholder="Ingrese su apellido" type="text" v-model="apellido"
+                            v-on:keypress.enter="agregarPersona"> </p>
+                    <label for="">Edad</label>
+                    <p type="Ciudad"><input placeholder="Ingrese su hobby" type="text" v-model="ciudad"
+                            v-on:keypress.enter="agregarPersona"> </p>
+                    <label for="">Ciudad</label>
+                    <p type="Edad"><input placeholder="Ingrese su género" type="text" v-model="edad"
+                            v-on:keypress.enter="agregarPersona"> </p>
+
+                    <div><button v-on:click="agregarPersona">Guardar</button></div>
+
+                    <h3>Lista de Personas</h3>
+                    <ul>
+                        <li v-for="({nombre,apellido,ciudad,edad}, index) in miArreglo">
+                            <span>{{nombre}} - {{apellido}} - {{ciudad}} - {{edad}}</span>
+
+                        </li>
+                    </ul>
+
+                </div>
+        </div>
+    </div>
+
+    </section>
+    <footer></footer>
+
+    <script src="../js/appFormularioD.js"></script>
+
+
+
+</body>
+
+</html>
